@@ -1,14 +1,21 @@
-numeros = list()
-val = 0
+l = list()
 while True:
-    numeros.append(int(input("Digite um valor: ")))
-    val += 1
-    x = input("Quer continuar?[S/N] ")
-    if x in "Nn":
+    x = int(input("Digite um valor: "))
+    l.append(x)
+    c = str(input("Deseja continuar[S/N]? "))
+    #while c in "":
+        #print("Escolha errada, tente novamente, tecle 'S' ou 'N'!")
+        #c = str(input("Deseja continuar[S/N]? "))
+    if c in "Nn":
+        print(f"Você digitou {len(l)} elementos!")
+        l.sort(reverse=True)
+        print(f"Os valores em ordem decrescente são: {l}")
+        if 5 in l:
+            print("O valor 5 faz parte da lista!")
+        else:
+            print("O valor 5 não faz parte da lista!")
         break
-print(f"Foram digitados {val} valores.")
-print(f"Os valores em ordem descrescente são: {numeros.sort(reverse=True)}")
-if 5 in numeros:
-    print("O valor 5 foi encontrado na lista!")
-else:
-    print("O valor 5 não foi encontrado na lista!")
+print("Program Finished")
+
+
+

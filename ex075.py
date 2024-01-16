@@ -10,8 +10,7 @@ if 3 in a:
 else:
     print(f"Não foi digitado nenhuma vez o número 3!")
 print("Os números pares digitados são: ")
-for c in range(0, 4):
-    b = (a[c])
-    if b % 2 == 0:
-        print(f"{b}")
+for c in a:
+    if c % 2 == 0:
+        print(f"{c}")
 print("FIM")
